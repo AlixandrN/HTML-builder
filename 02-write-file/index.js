@@ -17,7 +17,7 @@ function main () {
             
             function inputText() {
                 rl.question('Enter text ', (data) => {
-                    if(data == 'exit') {console.log('Good Bye!!!'); rl.close();}
+                    if(data == 'exit') {rl.close();}
                        else {              
                         fs.appendFile(
                             path.join('02-write-file', 'myText.txt'),
@@ -30,7 +30,7 @@ function main () {
                     });
                     
                     rl.on('close', () => {
-                        console.log('Good Bye!!!');
+                        console.log('\nGood Bye!!!');
                         process.exit(0);
                       });
             }      
